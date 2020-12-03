@@ -6,7 +6,7 @@ import {paginacion, paginacionMenos} from "../store/actions";
 export default function Botones({query}) {
     
     const dispatch = useDispatch();
-    const pagination = useSelector(state => state.offset)
+    const pagination = useSelector(state => state.offset);
 
     return (
         <Container style={{display: "flex", alignItems: "center", justifyContent: "center"}}>

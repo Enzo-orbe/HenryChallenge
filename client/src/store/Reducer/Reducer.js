@@ -3,7 +3,7 @@ import {SEARCH_PRODUCT, NEW_PRODUCT, USED_PRODUCT, MAYOR_PRECIO, PAGINACION_MENO
 const initialState = {
     products: [],
     offset: 0,
-    error: ""
+    error: "",
 }
 
 export default function(state = initialState, action){
@@ -40,7 +40,7 @@ export default function(state = initialState, action){
         case USED_PRODUCT: 
             return { 
                 ...state,
-                products:[...state.products].sort((a,b) => a.condition < b.condition ? 1  : -1)
+                products:[...state.products].sort((a,b) => a.condition < b.condition ?  1  : -1)
             }       
         case MAYOR_PRECIO: 
         return {

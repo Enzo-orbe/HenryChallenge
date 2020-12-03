@@ -4,7 +4,7 @@ import axios from "axios";
 export function getProducts(query) {
     console.log(query)
     return function(dispatch){
-        axios.get(`http://localhost:3001/search?q=${query}`)
+        axios.get(`http://localhost:3001/api/search?q=${query}`)
         .then(res => {
             console.log(res.data)
             dispatch({ type: SEARCH_PRODUCT, payload: res.data})
@@ -24,7 +24,7 @@ export function paginacion(paginacion) {
 
 export function paginacionMenos(query) {
     return function(dispatch){
-        axios.get(`http://localhost:3001/search?q=${query}`)
+        axios.get(`http://localhost:3001/api/search?q=${query}`)
         .then(res => {
             console.log(res.data)
             dispatch({ type: PAGINACION_MENOS, payload: res.data})

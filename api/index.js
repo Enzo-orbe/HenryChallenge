@@ -10,7 +10,7 @@ server.use(express.urlencoded({extended: false}))
 server.use(express.json());
 server.use(cors());
 
-server.use("/search", searchRouter)
+server.use("/api", searchRouter)
 
 
 server.listen(port, () => {
