@@ -35,12 +35,12 @@ export default function(state = initialState, action){
         case NEW_PRODUCT: 
             return {
                 ...state,
-                products: [...state.products].filter(prod => prod.condition === action.payload) 
+                products: [...state.products].sort((a,b) => a.condition > b.condition ? 1  : -1) 
             }  
         case USED_PRODUCT: 
             return { 
                 ...state,
-                products: [...state.products].filter(prod => prod.condition === action.payload) 
+                products:[...state.products].sort((a,b) => a.condition < b.condition ? 1  : -1)
             }       
         case MAYOR_PRECIO: 
         return {
